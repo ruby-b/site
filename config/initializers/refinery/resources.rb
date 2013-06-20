@@ -20,8 +20,8 @@ Refinery::Resources.configure do |config|
   # Configure Dragonfly
   # This is where in the middleware stack to insert the Dragonfly middleware
   # config.dragonfly_insert_before = "ActionDispatch::Callbacks"
-  # config.dragonfly_secret = "a9f073aca1704cec837c912274b53ce3f00664192b7b3bc0"
+  # config.dragonfly_secret = "03648b6c54115619b197b5c2ade308ca8cadb0922a160a98"
   # config.dragonfly_url_format = "/system/resources/:job/:basename.:format"
-  # config.datastore_root_path = "/Users/muryoimpl/tmp/test/rubyb/public/system/refinery/resources"
+  # config.datastore_root_path = "/home/teho/rubykyou-rails/rubyb/public/system/refinery/resources"
 
 end
