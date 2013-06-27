@@ -6,20 +6,19 @@ body {
   font-family: Verdana;
   font-size: 13px;
   line-height: 18px;
-  margin-bottom: 47px;
+  margin: 0 0 47px 0;
 }
 
 #body_content{
   background: white;
   color: #333;
-  padding: 20px;
 }
 
 #side_body_content {
   float: left;
   background: white;
   color: #666;
-  padding: 20px;
+
 }
 
 #menu ul {
@@ -29,7 +28,9 @@ body {
 
 #menu ul li {
   float: left;
-  margin-right: 10px;
+  margin-left: 2px;
+  margin-right: 2px;
+  width: 90px;
 }
 /*
 #menu ul li a {
