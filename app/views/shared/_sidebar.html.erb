@@ -1,0 +1,62 @@
+
+
+<section id='sidebar'>
+<div id='float-menu'>
+  <nav id='sub-menu'>
+    <h2>
+      <a href='http://ruby-b.com/index.html'>Rubyビジネス推進協議会</a>
+    </h2>
+    <ul>
+      <li>
+        <a href='http://ruby-b.com/council.html'>設立趣旨</a>
+      </li>
+      <li>
+        <a href='http://ruby-b.com/action.html'>主な活動</a>
+      </li>
+      <li>
+        <a href='http://ruby-b.com/structure.html'>構成</a>
+      </li>
+      <li>
+        <a href='http://ruby-b.com/member.html'>会員企業・団体</a>
+      </li>
+    </ul>
+    <br>
+      <a href='http://www.jasa.or.jp/etwest/2012/index.html' target='_blank'>
+        <%= image_tag "etw2012bana.gif"%>
+      </a>
+    </br>
+  </nav>
+</div>
+<div class='twitter'>
+  <script charset='utf-8' src='http://widgets.twimg.com/j/2/widget.js'></script>
+  <script type='text/javascript'>
+    //<![CDATA[
+      new TWTR.Widget({
+        version: 2,
+        type: 'profile',
+        rpp: 4,
+        interval: 5000,
+        width: 'auto',
+        height: 400,
+        theme: {
+          shell: {
+            background: '#E93232',
+            color: '#FFFFFF', 
+      	    },
+          tweets: {
+            background: '#FFFFFF',
+            color: '#5A5A5A',
+            links: '#971010'
+          }
+        },
+        features: {
+          scrollbar: true,
+          loop: false,
+          live: true,
+          behavior: 'all'
+        }
+      }).render().setUser('yukihiro_matz').start();
+    //]]>
+  </script>
+</div>
+</section>

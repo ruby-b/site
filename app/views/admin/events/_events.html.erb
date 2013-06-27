@@ -1,0 +1,21 @@
+
+<table class="table table-bordered table-striped">
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>イベント名</th>
+      <th>URL</th>
+      <th>エントリ数</th>
+    </tr>
+  </thead>
+  <tbody>
+    <%- @events.each do |event| -%>
+    <tr>
+      <td><%= event.id %></td>
+      <td><%= link_to event.title, admin_event_path(event) %></td>
+      <td><%= event.url %></td>
+      <td><%= event.entries.count %></td>
+    </tr>
+    <%- end -%>
+  </tbody>
+</table>

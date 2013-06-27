@@ -1,0 +1,4 @@
+setTimeout(function(){
+  $("tr#entry-<%= params[:id] %>").fadeOut();
+  $('#entry-total-count').html('<%= @total_count %>');
+}, 400);

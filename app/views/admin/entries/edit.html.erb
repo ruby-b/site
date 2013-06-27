@@ -1,0 +1,15 @@
+<h2>申し込み編集</h2>
+
+<%= simple_form_for [:admin, @event, @entry],  :html => { :class => 'form-horizontal'} do |f| %>
+  <%= f.input :name %>
+  <%= f.input(:company) %>
+  <%= f.input(:division) %>
+  <%= f.input(:position) %>
+  <%= f.input(:address) %>
+  <%= f.input(:phone) %>
+  <%= f.input(:email) %>
+
+  <span style="margin-left: 10px;">
+    <%= f.submit "保存" %>
+  </span>
+<%- end -%>

@@ -1,0 +1,33 @@
+ja:
+  activerecord:
+    models:
+      admin: 管理者 #g
+      entry: 申し込み #g
+      event: イベント #g
+
+    attributes:
+      admin:
+        current_sign_in_at: current_sign_in_at  #g
+        current_sign_in_ip: current_sign_in_ip  #g
+        email: email  #g
+        encrypted_password: encrypted_password  #g
+        last_sign_in_at: last_sign_in_at  #g
+        last_sign_in_ip: last_sign_in_ip  #g
+        remember_created_at: remember_created_at  #g
+        reset_password_sent_at: reset_password_sent_at  #g
+        reset_password_token: reset_password_token  #g
+
+      entry:
+        address: 会社住所
+        company: 会社名
+        division: 部署名
+        email: メールアドレス
+        event: :activerecord.models.event  #g
+        name: お名前
+        phone: 電話番号
+        position: 役職名
+
+      event:
+        entries: 申し込み
+        title: イベント名  #g
+        url: URL #g

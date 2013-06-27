@@ -1,0 +1,40 @@
+.control-group {
+  margin: 10px;
+}
+.controls {
+  margin-top: 10px;
+}
+label.required {
+  abbr {
+    color: red;
+    font-size: 14px;
+  }
+}
+
+span.help-inline {
+  color: red;
+  margin-left: 10px;
+}
+
+
+div.wordsection {
+  margin-left: 10px;
+  h3 {
+    font-size: 14px;
+    font-weight: bold;
+  }
+
+  .wordcontent {
+    margin: 10px;
+    margin-left: 20px;
+  }
+}
+
+div.wordnotice {
+  margin: 20px;
+
+  h3 {
+    font-size: 14px;
+    font-weight: bold;
+  }
+}

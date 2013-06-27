@@ -1,0 +1,20 @@
+<%= simple_form_for([@event, @entry], :url => confirm_event_entries_path(@event)) do |f| %>
+  <%= f.input(:name) %>
+  <%= f.input(:company) %>
+  <%= f.input(:division) %>
+  <%= f.input(:position) %>
+  <%= f.input(:address) %>
+  <%= f.input(:phone) %>
+  <%= f.input(:email) %>
+
+  <span style="margin-left: 10px;">
+    <%= f.submit "入力内容を確認" %>
+  </span>
+<%- end -%>
+<br />
+<br />
+<p>
+※個人情報保護について<br />
+記載頂いた情報は、当イベントの連絡及びRubyビジネス推進協議会が主催する各種催し物のご案内に利用させて頂きます。<br />
+ご都合の悪い方は、大変お手数では御座いますが、その旨をお知らせください。
+</p>

@@ -1,0 +1,11 @@
+<h1><%= @event.title %> <small>申し込み一覧</small></h1>
+
+<%= render :partial => "entries" %>
+
+<%= paginate @entries %>
+
+<%= render :partial => "admin/entries/delete_confirm_modal" %>
+
+<%= link_to "CSV ダウンロード", csv_admin_event_entries_path(@event), :class => "btn btn-primary" %>
+
+<div style="margin-bottom: 20px;"></div>

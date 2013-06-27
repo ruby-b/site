@@ -1,0 +1,71 @@
+<section class='header-section' id='news'>
+  <h2><%= @event.title %> へのお申し込み内容</h2>
+
+  <div class="wordnotice">
+    <h3>下記内容でお間違いなければ「申し込み」ボタンを押してください。</h3>
+  </div>
+
+  <%= form_for [@event, @entry] do |f| -%>
+  <div class="wordsection">
+    <h3><%= Entry.human_attribute_name(:name) %></h3>
+    <div class="wordcontent">
+      <%= @entry.name %>
+      <%= f.hidden_field :name, :value => @entry.name %>
+    </div>
+  </div>
+
+  <div class="wordsection">
+    <h3><%= Entry.human_attribute_name(:company) %></h3>
+    <div class="wordcontent">
+      <%= @entry.company %>
+      <%= f.hidden_field :company, :value => @entry.company %>
+    </div>
+  </div>
+
+  <div class="wordsection">
+    <h3><%= Entry.human_attribute_name(:division) %></h3>
+    <div class="wordcontent">
+      <%= @entry.division.present? ? @entry.division : "入力なし"  %>
+      <%= f.hidden_field :division, :value => @entry.division %>
+    </div>
+  </div>
+
+  <div class="wordsection">
+    <h3><%= Entry.human_attribute_name(:position) %></h3>
+    <div class="wordcontent">
+      <%= @entry.position.present? ? @entry.position : "入力なし"  %>
+      <%= f.hidden_field :position, :value => @entry.position %>
+    </div>
+  </div>
+
+  <div class="wordsection">
+    <h3><%= Entry.human_attribute_name(:address) %></h3>
+    <div class="wordcontent">
+      <%= @entry.address %>
+      <%= f.hidden_field :address, :value => @entry.address %>
+    </div>
+  </div>
+
+  <div class="wordsection">
+    <h3><%= Entry.human_attribute_name(:phone) %></h3>
+    <div class="wordcontent">
+      <%= @entry.phone %>
+      <%= f.hidden_field :phone, :value => @entry.phone %>
+    </div>
+  </div>
+
+  <div class="wordsection">
+    <h3><%= Entry.human_attribute_name(:email) %></h3>
+    <div class="wordcontent">
+      <%= @entry.email %>
+      <%= f.hidden_field :email, :value => @entry.email %>
+    </div>
+  </div>
+
+  <span style="margin-left: 10px;">
+    <%= f.submit "申し込み" %>
+  </span>
+
+  <%- end -%>
+</section>
+

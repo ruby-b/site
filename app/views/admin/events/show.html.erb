@@ -1,0 +1,36 @@
+<h2><%= @event.title %> <small>イベント詳細</small></h2>
+
+<h3>イベント情報</h3>
+<table class="table table-bordered">
+  <tbody>
+    <tr>
+      <th>ID</th>
+      <td><%= @event.id %></td>
+    <tr/>
+    <tr>
+      <th>イベント名</th>
+      <td><%= @event.title %></td>
+    <tr/>
+    <tr>
+      <th>URL</th>
+      <td><%= @event.url %></td>
+    <tr/>
+    <tr>
+      <th>定員</th>
+      <td><%= @event.entry_max %> 名</td>
+    <tr/>
+  </tbody>
+</table>
+
+<h3>参加者情報 <small>(最新10件)</small></h3>
+<%= render :partial => "admin/entries/entries" %>
+
+<%- if @entries.num_pages -%>
+  <%= link_to raw("もっと見る ( <span id='entry-total-count'>#{@total_entries}</span> )"), admin_event_entries_path(@event) %>
+<%- end -%>
+
+<div style="margin:20px 0 20px 0;">
+<%= link_to "CSV ダウンロード", csv_admin_event_entries_path(@event), :class => "btn btn-primary" %>
+</div>
+
+<%= render :partial => "admin/entries/delete_confirm_modal" %>

@@ -1,0 +1,26 @@
+<h2>最近の申し込み <small>最新10件</small></h2>
+
+<table class="table table-bordered table-striped table-condensed">
+  <thead>
+    <tr>
+      <th>申込日</th>
+      <th>イベント名</th>
+      <th>会社名</th>
+      <th>名前</th>
+    </tr>
+  </thead>
+  <tbody>
+    <%- @entries.each do |entry| -%>
+    <tr>
+      <td><%= entry.updated_at.strftime("%Y/%m/%d") %></td>
+      <td><%= link_to entry.event.title, admin_event_path(entry.event) %></td>
+      <td><%= entry.company %></td>
+      <td><%= entry.name %></td>
+    </tr>
+    <%- end -%>
+  </tbody>
+</table>
+
+<h2>イベント一覧 <small>最新10件</small></h2>
+
+<%= render :partial => "admin/events/events" %>
