@@ -7,12 +7,16 @@ gem 'rails', '3.2.13'
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
+# Production for heroku
 group :production do
   gem 'pg'
+    gem 'thin'
 end
 
 group :development, :test do
   gem 'sqlite3'
+  # NOTE: https://github.com/thoughtbot/factory_girl_rails/issues/53
+  gem 'i18n_generators'
 end
 
 
@@ -37,7 +41,7 @@ gem 'jquery-rails'
 # gem 'jbuilder'
 
 # Use unicorn as the app server
-# gem 'unicorn'
+gem 'unicorn'
 
 # Deploy with Capistrano
 # gem 'capistrano'
@@ -55,3 +59,42 @@ gem 'refinerycms-i18n',   '~> 2.0.0'
 #  gem 'refinerycms-inquiries', '~> 2.0.0'
 #  gem 'refinerycms-search', '~> 2.0.0'
 #  gem 'refinerycms-page-images', '~> 2.0.0'
+
+gem 'simple_form'
+gem "twitter-bootstrap-rails"
+gem 'sanitize'
+gem 'kaminari'
+
+# rake dev:db:seed
+gem 'factory_girl_rails'
+
+# authentication
+gem "devise"
+
+# Local, Test
+group :test,  :cucumber,  :development do
+  gem 'heroku'
+
+  gem "rspec-rails"
+  gem "webrat"
+  gem "ffaker"
+  gem "autotest"
+  gem "spork"
+  gem "rb-fsevent"
+  gem "guard-spork"
+  gem "guard-rspec"
+  gem "guard-cucumber"
+  gem "growl"
+  gem "database_cleaner"
+  gem 'capybara'
+  gem "cucumber-rails",  "~> 1.0",:require =>  false
+end
+
+# Deploy with Capistrano
+group :development do
+  gem 'capistrano'
+  gem 'capistrano-ext'
+  gem 'capistrano_colors'
+  gem 'capistrano_rsync_with_remote_cache'
+  gem 'rvm-capistrano'
+end
