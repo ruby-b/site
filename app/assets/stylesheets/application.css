@@ -1,47 +1,4 @@
 /*
  *= require_self
- *= require style
+ *= require refinery
  */
-
-body {
-  background: #F2F2F2;
-  font-family: Verdana;
-  font-size: 13px;
-  line-height: 18px;
-  margin: 0 0 47px 0;
-}
-
-#body_content{
-  background: white;
-  color: #333;
-}
-
-#side_body_content {
-  float: left;
-  background: white;
-  color: #666;
-
-}
-
-#menu ul {
-  list-style: none;
-  padding: 0px;
-}
-
-#menu ul li {
-  float: left;
-  margin-left: 2px;
-  margin-right: 2px;
-  width: 90px;
-}
-/*
-#menu ul li a {
-  display: block;
-  padding: 5px 10px;
-  text-decoration: none;
-}
-
-#menu ul li.selected a, #menu ul li a:hover {
-  background: #CCC;
-}
-*/

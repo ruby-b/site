@@ -1,0 +1,299 @@
+/* 
+    Document   : refinery.css
+    Created on : 2013/06/26, 7:27:45
+    Author     : oonishi@centerfield
+    Description:
+        Purpose of the stylesheet follows.
+*/
+
+/* フォントは前回のを引き継ぎ */
+body {
+  background: #F2F2F2;
+  font-family: "ヒラギノ角ゴ Pro W3","Hiragino Kaku Gothic Pro",Osaka,"メイリオ",Meiryo,"ＭＳＰゴシック",sans-serif;
+  font-size: 13px;
+  line-height: 18px;
+  margin: 0 0 47px 0;
+}
+
+/* メイン＋サイドの幅・背景・センタリング指定 */
+section#page {
+    width: 950px;
+    background: white;
+    margin: 25px auto;
+    clear: left;
+}
+
+/* メインの文字色指定 */
+#body_content{
+  color: #333;
+  float: left;
+}
+
+/* メイン内にsectionタグがあれば幅固定（サイド表示の為） */
+#body_content section{
+    width: 630px;
+    margin: 20px;
+}
+
+/* メイン内sectionタグのIDがmain-frameなら横幅１カラム向け */
+#body_content section#main-frame{
+    width: 910px;
+}
+
+/* サイドの文字色指定 */
+#side_body_content {
+  color: #666;
+  float: left;
+
+}
+
+/* ヘッダーの背景画像 */
+#header { 
+    background-color: white;
+    background-image: url("common/top_bana.png"), url("common/bg.png");
+    background-position: right 100px, center 100px;
+    background-repeat: no-repeat, repeat-x;
+    height: 300px;
+    margin: 0 auto;
+    width: 100%;
+    text-align: center;
+}
+
+/* Rubyビジネス推進協議会ロゴ */
+h1#logo { 
+    background: url("common/rubylogo.png") no-repeat scroll right 0 transparent;
+    width: 45%;
+    height: 100px;
+    float: left;
+    margin: 0 auto;
+}
+h1#logo a{ 
+    position: absolute;
+    top: 200px;
+}
+
+/* ログイン時のメニューバーが邪魔なので下部に移動 */
+#site_bar {
+    bottom: 0;
+    height: 47px;
+    padding: 0;
+    position: fixed;
+    right: 0;
+    width: 100%;
+    margin-top: 47px;
+}
+
+/* フッターの赤帯部分 */
+footer {
+    background: url("common/footer.jpg") no-repeat no-repeat 0 bottom transparent;
+    height: 30px;
+    width: 100%;
+}
+footer p {
+    color: #FFFFFF;
+    display: block;
+    font-size: 10px;
+    padding-top: 10px;
+    text-align: center;
+}
+
+/* ページナビをいい感じにする */
+nav#menu {
+    float: left;
+    margin: 0 auto;
+    width: 55%;
+    height: 90px;
+    padding-top: 25px;
+}
+nav#menu ul li {
+  float: left;
+  margin-left: 2px;
+  margin-right: 2px;
+  width: 90px;
+  white-space: nowrap;
+}
+nav#menu ul li a{
+    border-bottom: 8px solid #666;
+    color: #333333;
+    display: block;
+    font-size: 15px;
+    line-height: 30px;
+    text-align: center;
+    text-decoration: none;
+}
+nav#menu ul li a:hover{
+    border-bottom: 8px solid #F00;
+}
+ul.clearfix {
+    display: none;
+}
+
+/* このページの先頭へのリンク */
+div.top-link {
+    font-size: x-small;
+    padding: 5px;
+    text-align: right;
+}
+
+/* articleタグに赤枠をつける */
+article.article {
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    border-color: -moz-use-text-color #E93234 #E93234;
+    border-image: none;
+    border-right: 1px solid #E93234;
+    border-style: none solid solid;
+    border-width: medium 1px 1px;
+    padding: 10px;
+}
+
+/* メイン内のタイトルの背景 */
+#body_content section h2 {
+    background-image: url("common/titlebana.png");
+    background-repeat: no-repeat;
+    color: white;
+    font-size: large;
+    font-weight: normal;
+    height: 45px;
+    margin: 0;
+    padding-left: 100px;
+    padding-top: 25px;
+}
+
+/* メイン内のサブタイトル */
+.main-section h3 {
+    color: #5A5A5A;
+    background: none;
+    border-bottom: 2px solid #CCCCCC;
+    border-left: 4px solid #FF0033;
+    font-size: large;
+    font-weight: normal;
+    margin-bottom: 10px;
+    padding: 5px 0 5px 10px;
+    vertical-align: baseline;
+    height: auto;
+}
+
+/* サイドのメニュー */
+nav ul {
+    list-style: none outside none;
+    margin: 0;
+    padding: 0;
+}
+nav#sub-menu {
+    margin: 0 auto;
+}
+nav#sub-menu h2 {
+    background: none repeat scroll 0 0 transparent;
+    border-left: 8px solid #EC5254;
+    display: block;
+    padding: 6px 0 6px 7px;
+    height: auto;
+    margin: 20px 0 0;
+}
+#sub-menu ul li {
+    border-left: 8px solid #FFB9BD;
+    padding-left: 10px;
+}
+
+/* トップページの最新情報タイトル */
+section#body_content .content-left .header-section h2 {
+    color: #5A5A5A;
+    background: none;
+    border-bottom: 2px solid #CCCCCC;
+    border-left: 4px solid #FF0033;
+    font-size: large;
+    font-weight: normal;
+    margin-bottom: 10px;
+    padding: 5px 0 5px 10px;
+    vertical-align: baseline;
+    height: auto;
+}
+
+/* トップページの最新情報 */
+.topic {
+    padding-left: 10px;
+    line-height: 1.2;
+}
+.topic dl {
+    border-bottom: 1px dotted #999999;
+/*    display: inline-block;*/
+    display: table-cell;
+    width: 100%;
+}
+.topic dl dt {
+    background-image: url("common/topic_dt.jpg");
+    background-position: 0 5px;
+    background-repeat: no-repeat;
+    background-size: 15px auto;
+    color: #666666;
+    float: left;
+    padding: 5px 5px 5px 20px;
+    width: 100px;
+}
+.topic dl dd {
+    float: left;
+    margin: 0;
+    padding: 5px;
+    width: 425px;
+}
+
+/* トップページのSNS */
+.social_button{
+    margin-left: 20px;
+    margin-top: 20px;
+}
+.social_button .twitter {
+    float: left;
+    width: 100px !important;
+}
+.social_button .facebook {
+    float: left;
+    width: auto;
+}
+
+/* イベント情報のliマーク */
+ul.member li {
+    background-image: url("common/member_li.jpg");
+    background-position: 0 2px;
+    background-repeat: no-repeat;
+    border-bottom: 2px dotted #EEEEEE;
+    margin-bottom: 10px;
+    padding-left: 20px;
+}
+
+/* olとulタグの・マークを消す */
+ol, ul {
+    list-style: none outside none;
+    padding: 0;
+}
+
+/* aタグ */
+a {
+    color: #5A5A5A;
+    text-decoration: none;
+    background: none repeat scroll 0 0 transparent;
+    font-size: 100%;
+    margin: 0;
+    padding: 0;
+    vertical-align: baseline;
+}
+a:hover{
+    color: #8A8A8A;
+}
+
+/* そのた */
+.red {
+    color: #FF4040;
+}
+.bigger {
+    font-size: 110%;
+}
+strong {
+    font-weight: bold;
+}
+.alignright {
+    text-align: right;
+}
