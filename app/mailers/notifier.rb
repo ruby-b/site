@@ -1,6 +1,6 @@
 # coding: utf-8
 class Notifier < ActionMailer::Base
-  default from "no-reply@ruby-b.com"
+  default from: "no-reply@ruby-b.com"
 
   def entry_mail(entry)
     @entry = entry
