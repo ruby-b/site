@@ -1,5 +1,7 @@
-@import url('refinery/application.css');
-@import url('style.css');
+/*
+ *= require_self
+ *= require style
+ */
 
 body {
   background: #F2F2F2;
