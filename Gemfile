@@ -100,3 +100,7 @@ group :development do
 end
 
 gem 'yaml_db'
+gem "therubyracer"
+gem "less-rails"
+gem "twitter-bootstrap-rails"
+gem 'kaminari'

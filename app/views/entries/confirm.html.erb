@@ -5,7 +5,7 @@
     <h3>下記内容でお間違いなければ「申し込み」ボタンを押してください。</h3>
   </div>
 
-  <%= form_for [@event, @entry] do |f| -%>
+  <%= form_for [@event, @entry], url: forum_entries_path do |f| -%>
   <div class="wordsection">
     <h3><%= Entry.human_attribute_name(:name) %></h3>
     <div class="wordcontent">

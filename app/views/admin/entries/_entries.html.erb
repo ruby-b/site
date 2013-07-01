@@ -21,9 +21,9 @@
       <td><%= mail_to entry.email, entry.email %></td>
       <td style="text-align:center;">
         <%- if false -%>
-        <%= link_to "詳細", admin_event_entry_path(@event, entry), :class => "btn btn-mini btn-info"%>
+        <%= link_to "詳細", admin_forum_entry_path(@event, entry), :class => "btn btn-mini btn-info"%>
         <%- end -%>
-        <%= link_to "編集", edit_admin_event_entry_path(@event, entry), :class => "btn btn-mini btn-success"%>
+        <%= link_to "編集", edit_admin_forum_entry_path(@event, entry), :class => "btn btn-mini btn-success"%>
         <%= link_to "削除", "#", :class => "delete_entry btn btn-mini btn-danger", :"data-id" => entry.id, :"data-toggle" => "modal", :"data-target" => "#delete_confirm_modal", :"data-event_id" => @event.id %>
       </td>
     </tr>

@@ -12,7 +12,7 @@
     <%- @events.each do |event| -%>
     <tr>
       <td><%= event.id %></td>
-      <td><%= link_to event.title, admin_event_path(event) %></td>
+      <td><%= link_to event.title, admin_forum_path(event) %></td>
       <td><%= event.url %></td>
       <td><%= event.entries.count %></td>
     </tr>

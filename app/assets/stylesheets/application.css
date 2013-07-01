@@ -2,3 +2,56 @@
  *= require_self
  *= require refinery
  */
+
+.header-section {
+  padding: 20px;
+}
+.header-section h2 {
+    font-size: large;
+    font-weight: normal;
+    border-left: 4px solid #F03;
+    border-bottom: 2px solid #CCC;
+    padding: 5px 0 5px 10px;
+    margin-bottom: 10px; 
+}
+
+.control-group {
+  margin: 10px;
+}
+.controls {
+  margin-top: 10px;
+}
+label.required {
+  abbr {
+    color: red;
+    font-size: 14px;
+  }
+}
+
+span.help-inline {
+  color: red;
+  margin-left: 10px;
+}
+
+
+div.wordsection {
+  margin-left: 10px;
+  h3 {
+    font-size: 14px;
+    font-weight: bold;
+  }
+
+  .wordcontent {
+    margin: 10px;
+    margin-left: 20px;
+  }
+}
+
+div.wordnotice {
+  margin: 20px;
+
+  h3 {
+    font-size: 14px;
+    font-weight: bold;
+  }
+}

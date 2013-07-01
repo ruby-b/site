@@ -1,6 +1,6 @@
 <h2>申し込み編集</h2>
 
-<%= simple_form_for [:admin, @event, @entry],  :html => { :class => 'form-horizontal'} do |f| %>
+<%= simple_form_for [:admin, @event, @entry], url: admin_forum_entry_path(@event, @entry),  :html => { :class => 'form-horizontal'} do |f| %>
   <%= f.input :name %>
   <%= f.input(:company) %>
   <%= f.input(:division) %>

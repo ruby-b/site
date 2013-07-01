@@ -15,7 +15,7 @@ class EntriesController < ApplicationController
   end
 
   def confirm
-    @event = Event.where(:id => params[:event_id]).first
+    @event = Event.where(:id => params[:forum_id]).first
     @entry = @event.entries.new(params[:entry])
 
     if @entry.valid?
@@ -26,12 +26,12 @@ class EntriesController < ApplicationController
   end
 
   def create
-    @event = Event.where(:id => params[:event_id]).first
+    @event = Event.where(:id => params[:forum_id]).first
     @entry = @event.entries.new(params[:entry])
 
     if @entry.save
       Notifier.entry_mail(@entry).deliver
-      redirect_to event_entry_path(@event.url, @entry)
+      redirect_to forum_entry_path(@event.url, @entry)
     else
       render :action => :new
     end
@@ -39,6 +39,6 @@ class EntriesController < ApplicationController
 
   private
   def set_event
-    @event = Event.find_by_url(params[:event_id])
+    @event = Event.find_by_url(params[:forum_id])
   end
 end

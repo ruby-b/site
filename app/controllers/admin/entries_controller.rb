@@ -7,7 +7,7 @@ class Admin::EntriesController < Admin::BaseController
   before_filter :set_event
 
   def index
-    @entries = @event.entries.page(params[:page]).per(Entry::PER_PAGE_MORE)
+    @entries = @event.entries.page(params[:page])
   end
 
   def show
@@ -22,7 +22,7 @@ class Admin::EntriesController < Admin::BaseController
 
 
     if @entry.update_attributes(params[:entry])
-      redirect_to admin_event_entries_path(:event_id => @event.id), :notice => "申込情報を更新しました"
+      redirect_to admin_forum_entries_path(:forum_id => @event.id), :notice => "申込情報を更新しました"
     else
       render :edit
     end
@@ -58,6 +58,6 @@ class Admin::EntriesController < Admin::BaseController
 
   private
   def set_event
-    @event = Event.find(params[:event_id])
+    @event = Event.find(params[:forum_id])
   end
 end

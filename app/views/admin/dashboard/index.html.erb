@@ -13,7 +13,7 @@
     <%- @entries.each do |entry| -%>
     <tr>
       <td><%= entry.updated_at.strftime("%Y/%m/%d") %></td>
-      <td><%= link_to entry.event.title, admin_event_path(entry.event) %></td>
+      <td><%= link_to entry.event.title, admin_forum_path(entry.event) %></td>
       <td><%= entry.company %></td>
       <td><%= entry.name %></td>
     </tr>
