@@ -13,7 +13,7 @@ Rubyb::Application.routes.draw do
     end
   end
 
-  resources :events, :only => [:show] do
+  resources :forums, controller: 'events', :only => [:show] do
     resources :entries, :only => [:new, :show, :create] do
       post :confirm, :on => :collection
     end
