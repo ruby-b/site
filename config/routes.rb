@@ -6,7 +6,7 @@ Rubyb::Application.routes.draw do
   }
   namespace :admin do
     root :to => "dashboard#index"
-    resources :events do
+    resources :forums, controller: 'events' do
       resources :entries do
         get :csv, :on => :collection
       end
