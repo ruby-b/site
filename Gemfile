@@ -11,6 +11,7 @@ gem 'rails', '3.2.13'
 group :production do
   gem 'pg'
     gem 'thin'
+  gem 'fog'
 end
 
 group :development, :test do
