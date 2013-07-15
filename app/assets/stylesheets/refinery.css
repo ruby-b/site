@@ -27,8 +27,6 @@ section#page {
 #body_content{
   color: #333;
   float: left;
-  width: 710px;
-  padding: 20px;
 }
 
 /* メイン内にsectionタグがあれば幅固定（サイド表示の為） */
@@ -267,12 +265,9 @@ ul.member li {
 }
 
 /* olとulタグの・マークを消す */
-ul {
+ol, ul {
     list-style: none outside none;
     padding: 0;
-}
-ol {
-  padding: 0;
 }
 
 /* aタグ */
