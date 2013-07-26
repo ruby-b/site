@@ -17,7 +17,7 @@ body {
 
 /* メイン＋サイドの幅・背景・センタリング指定 */
 section#page {
-    width: 1000px;
+    width: 1040px;
     background: white;
     margin: 25px auto;
     clear: left;
