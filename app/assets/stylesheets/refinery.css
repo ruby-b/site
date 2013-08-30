@@ -297,3 +297,6 @@ strong {
 .alignright {
     text-align: right;
 }
+iframe {
+    border: 0;
+}
