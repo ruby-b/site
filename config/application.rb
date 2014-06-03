@@ -65,11 +65,11 @@ module Rubyb
 
     config.action_mailer.delivery_method = :smtp
     config.action_mailer.smtp_settings = {
-      :address => 'smtp.lolipop.jp',
+      :address => 'agileware.sakura.ne.jp',
       :port => 587,
       :authentication => :login,
-      :user_name => 'ruby-b@d-it.in',
-      :password => 'douhashi1002'
+      :user_name => 'rubyb@agileware.sakura.ne.jp',
+      :password => 'G1iU68sR'
     }
   end
 end
