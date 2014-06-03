@@ -1,6 +1,6 @@
 class Event < ActiveRecord::Base
   has_many :entries
-  attr_accessible :title, :url
+  attr_accessible :title, :url, :entry_max
 
   default_scope order("created_at DESC")
 
