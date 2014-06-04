@@ -1,11 +1,11 @@
 <%= simple_form_for([@event, @entry], :url => confirm_forum_entries_path(@event)) do |f| %>
-  <%= f.input(:name) %>
-  <%= f.input(:company) %>
-  <%= f.input(:division) %>
-  <%= f.input(:position) %>
-  <%= f.input(:address) %>
-  <%= f.input(:phone) %>
-  <%= f.input(:email) %>
+  <%= f.input :name, input_html: { class: 'forum-form' }  %>
+  <%= f.input :company, input_html: { class: 'forum-form' } %>
+  <%= f.input :division, input_html: { class: 'forum-form' } %>
+  <%= f.input :position, input_html: { class: 'forum-form' } %>
+  <%= f.input :address, input_html: { class: 'forum-form', size: 100 } %>
+  <%= f.input :phone, input_html: { class: 'forum-form' } %>
+  <%= f.input :email, input_html: { class: 'forum-form' } %>
 
   <span style="margin-left: 10px;">
     <%= f.submit "入力内容を確認" %>
