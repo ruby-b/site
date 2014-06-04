@@ -1,5 +1,8 @@
 ja:
   activerecord:
+    errors:
+      messages:
+        blank: を入力してください。
     models:
       admin: 管理者 #g
       entry: 申し込み #g
