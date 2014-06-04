@@ -2,6 +2,7 @@
  *= require_self
  *= require refinery
  *= require cms
+ *= require forum
  */
 
 .header-section {
