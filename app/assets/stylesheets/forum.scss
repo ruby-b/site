@@ -1,9 +1,10 @@
-.forum-form {
+.forum-form-input
+{
   border:0;
   padding:10px;
   font-size:1.1em;
   font-family:Arial, sans-serif;
-  color:#aaa;
+  color:#000;
   border:solid 1px #ccc;
   margin:0 0 20px;
 
@@ -14,4 +15,57 @@
   -moz-box-shadow: inset 1px 4px 9px -6px rgba(0,0,0,0.5);
   -webkit-box-shadow: inset 1px 4px 9px -6px rgba(0, 0, 0, 0.5);
   box-shadow: inset 1px 4px 9px -6px rgba(0,0,0,0.5);
+}
+
+.forum-form-button {
+  display: inline-block;
+  width: 160px;
+  height: 36px;
+  text-align: center;
+  text-decoration: none;
+  line-height: 36px;
+  outline: none;
+  font-size: 12px;
+  cursor: pointer;
+}
+.forum-form-button::before,
+.forum-form-button::after {
+  position: absolute;
+  z-index: -1;
+  display: block;
+  content: '';
+}
+.forum-form-button,
+.forum-form-button::before,
+.forum-form-button::after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-transition: all .3s;
+  transition: all .3s;
+}
+
+.forum-form-button {
+  border: 1px solid #EC6C6B;
+  background-color: #EC6C6B;
+  background-image: -webkit-linear-gradient(top, #EC6C6B, #EC6C6B);
+  background-image: linear-gradient(to bottom, #EC6C6B, #EC6C6B);
+  border-radius: 4px;
+  color: #fff;
+  line-height: 32px;
+  -webkit-transition: none;
+  transition: none;
+  text-shadow: 0 1px 1px rgba(0, 0, 0, .3);
+}
+.forum-form-button:hover {
+  border:1px solid #EA5E5D;
+  background-color: #EA5E5D;
+  background-image: -webkit-linear-gradient(top, #EA5E5D, #EA5E5D);
+  background-image: linear-gradient(to bottom, #EA5E5D, #EA5E5D);
+}
+.forum-form-button:active {
+  background: #EA5E5D;
+  box-shadow: inset 0 3px 5px rgba(0, 0, 0, .2);
+  color: #FFF;
+  text-shadow: 0 1px 1px rgba(255, 255, 255, .5);
 }
