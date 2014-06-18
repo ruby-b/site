@@ -44,10 +44,10 @@ class Admin::EntriesController < Admin::BaseController
     @entries = @event.entries.all
     filename = "#{@event.url}_entries_#{Date.today.strftime('%Y-%m-%d')}"
     csv_str =  CSV.generate do |csv|
-      csv << ["ID", "name", "company", "division", "position", "address", "phone", "email"]
+      csv << ["ID", "name", "company", "division", "position", "address", "phone", "email", "intermediary"]
 
       @entries.each do |e|
-        csv << [e.id, e.name, e.company, e.division, e.position, e.address, e.phone, e.email]
+        csv << [e.id, e.name, e.company, e.division, e.position, e.address, e.phone, e.email, e.intermediary]
       end
     end
 
