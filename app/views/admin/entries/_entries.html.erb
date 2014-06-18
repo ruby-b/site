@@ -7,6 +7,7 @@
       <th>名前</th>
       <th>電話番号</th>
       <th>メールアドレス</th>
+      <th>紹介者</th>
       <th></th>
     </tr>
   </thead>
@@ -19,6 +20,7 @@
       <td><%= entry.name %></td>
       <td><%= entry.phone %></td>
       <td><%= mail_to entry.email, entry.email %></td>
+      <td><%= entry.intermediary %></td>
       <td style="text-align:center;">
         <%- if false -%>
         <%= link_to "詳細", admin_forum_entry_path(@event, entry), :class => "btn btn-mini btn-info"%>
