@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20140603040213) do
+ActiveRecord::Schema.define(:version => 20140618110554) do
 
   create_table "admins", :force => true do |t|
     t.string   "email",                  :default => "", :null => false
@@ -40,8 +40,9 @@ ActiveRecord::Schema.define(:version => 20140603040213) do
     t.string   "address"
     t.string   "phone"
     t.string   "email"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
+    t.datetime "created_at",   :null => false
+    t.datetime "updated_at",   :null => false
+    t.string   "intermediary"
   end
 
   add_index "entries", ["event_id"], :name => "index_entries_on_event_id"
