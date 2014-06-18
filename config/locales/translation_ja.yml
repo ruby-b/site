@@ -29,7 +29,7 @@ ja:
         name: お名前
         phone: 電話番号
         position: 役職名
-        intermediary: 紹介者
+        intermediary: ご紹介者様
 
       event:
         entries: 申し込み
