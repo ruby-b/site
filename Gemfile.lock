@@ -98,6 +98,8 @@ GEM
     dragonfly (0.9.15)
       multi_json (~> 1.0)
       rack
+    enumerize (0.11.0)
+      activesupport (>= 3.2)
     erubis (2.7.0)
     eventmachine (1.0.7)
     excon (0.45.3)
@@ -1079,6 +1081,7 @@ DEPENDENCIES
   cucumber-rails (~> 1.0)
   database_cleaner
   devise
+  enumerize
   factory_girl_rails
   ffaker
   fog

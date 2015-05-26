@@ -7,6 +7,7 @@
       <th>名前</th>
       <th>電話番号</th>
       <th>メールアドレス</th>
+      <th>申込種別</th>
       <th>紹介者</th>
       <th></th>
     </tr>
@@ -20,6 +21,7 @@
       <td><%= entry.name %></td>
       <td><%= entry.phone %></td>
       <td><%= mail_to entry.email, entry.email %></td>
+      <td><%= entry.entry_type_text %></td>
       <td><%= entry.intermediary %></td>
       <td style="text-align:center;">
         <%- if false -%>

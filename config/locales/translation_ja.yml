@@ -29,9 +29,15 @@ ja:
         name: お名前
         phone: 電話番号
         position: 役職名
+        entry_type: 申し込みの種類
         intermediary: ご紹介者様
 
       event:
         entries: 申し込み
         title: イベント名  #g
         url: URL #g
+  enumerize:
+    entry:
+      entry_type:
+        seminar: セミナーのみ
+        full: セミナー+懇親会
