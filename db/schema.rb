@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20140618110554) do
+ActiveRecord::Schema.define(:version => 20150526155002) do
 
   create_table "admins", :force => true do |t|
     t.string   "email",                  :default => "", :null => false
@@ -43,6 +43,7 @@ ActiveRecord::Schema.define(:version => 20140618110554) do
     t.datetime "created_at",   :null => false
     t.datetime "updated_at",   :null => false
     t.string   "intermediary"
+    t.string   "entry_type"
   end
 
   add_index "entries", ["event_id"], :name => "index_entries_on_event_id"
@@ -68,11 +69,11 @@ ActiveRecord::Schema.define(:version => 20140618110554) do
   end
 
   create_table "refinery_page_part_translations", :force => true do |t|
-    t.integer  "refinery_page_part_id"
-    t.string   "locale"
-    t.text     "body"
+    t.integer  "refinery_page_part_id", :null => false
+    t.string   "locale",                :null => false
     t.datetime "created_at",            :null => false
     t.datetime "updated_at",            :null => false
+    t.text     "body"
   end
 
   add_index "refinery_page_part_translations", ["locale"], :name => "index_refinery_page_part_translations_on_locale"
@@ -91,14 +92,14 @@ ActiveRecord::Schema.define(:version => 20140618110554) do
   add_index "refinery_page_parts", ["refinery_page_id"], :name => "index_refinery_page_parts_on_refinery_page_id"
 
   create_table "refinery_page_translations", :force => true do |t|
-    t.integer  "refinery_page_id"
-    t.string   "locale"
+    t.integer  "refinery_page_id", :null => false
+    t.string   "locale",           :null => false
+    t.datetime "created_at",       :null => false
+    t.datetime "updated_at",       :null => false
     t.string   "title"
     t.string   "custom_slug"
     t.string   "menu_title"
     t.string   "slug"
-    t.datetime "created_at",       :null => false
-    t.datetime "updated_at",       :null => false
   end
 
   add_index "refinery_page_translations", ["locale"], :name => "index_refinery_page_translations_on_locale"

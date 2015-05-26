@@ -63,6 +63,14 @@
   </div>
 
   <div class="wordsection">
+    <h3><%= Entry.human_attribute_name(:entry_type) %></h3>
+    <div class="wordcontent">
+      <%= @entry.entry_type_text %>
+      <%= f.hidden_field :entry_type, :value => @entry.entry_type %>
+    </div>
+  </div>
+
+  <div class="wordsection">
     <h3><%= Entry.human_attribute_name(:intermediary) %></h3>
     <div class="wordcontent">
       <%= @entry.intermediary %>
