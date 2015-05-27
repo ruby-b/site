@@ -5,7 +5,7 @@ class Entry < ActiveRecord::Base
   validates_presence_of :name, :company, :address, :phone, :email
 
   extend Enumerize
-  enumerize :entry_type, in: [:full, :seminar]
+  enumerize :entry_type, in: [:seminar, :full]
 
   PER_PAGE = 10
   PER_PAGE_MORE = PER_PAGE * 3

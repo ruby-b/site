@@ -97,7 +97,7 @@ group :development do
   gem 'capistrano-ext'
   gem 'capistrano_colors'
   gem 'capistrano_rsync_with_remote_cache'
-  gem 'rvm-capistrano', require: false
+  gem 'rvm-capistrano'
 end
 
 gem 'yaml_db'
