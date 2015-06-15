@@ -63,6 +63,13 @@
   </div>
 
   <div class="wordsection">
+    <h3><%= Entry.human_attribute_name(:entry_table_talk) %></h3>
+    <div class="wordcontent">
+      <%= @entry.entry_table_talk %>
+    </div>
+  </div>
+
+  <div class="wordsection">
     <h3><%= Entry.human_attribute_name(:intermediary) %></h3>
     <div class="wordcontent">
       <%= @entry.intermediary %>
