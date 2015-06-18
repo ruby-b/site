@@ -1,11 +1,11 @@
 class Entry < ActiveRecord::Base
   belongs_to :event
-  attr_accessible :address, :company, :division, :email, :name, :phone, :position, :entry_type, :intermediary
+  attr_accessible :address, :company, :division, :email, :name, :phone, :position, :entry_type, :entry_table_talk, :intermediary
 
   validates_presence_of :name, :company, :address, :phone, :email
 
   extend Enumerize
-  enumerize :entry_type, in: [:seminar, :full]
+  enumerize :entry_type, in: [:full, :seminar]
 
   PER_PAGE = 10
   PER_PAGE_MORE = PER_PAGE * 3
