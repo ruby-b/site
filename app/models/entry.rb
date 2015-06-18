@@ -1,6 +1,6 @@
 class Entry < ActiveRecord::Base
   belongs_to :event
-  attr_accessible :address, :company, :division, :email, :name, :phone, :position, :entry_type, :intermediary
+  attr_accessible :address, :company, :division, :email, :name, :phone, :position, :entry_type, :entry_table_talk, :intermediary
 
   validates_presence_of :name, :company, :address, :phone, :email
 
