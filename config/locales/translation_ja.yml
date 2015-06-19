@@ -42,3 +42,6 @@ ja:
       entry_type:
         seminar: セミナーのみ
         full: セミナー+懇親会
+      entry_table_talk:
+        entry: 申し込む
+        not_entry: 申し込まない
