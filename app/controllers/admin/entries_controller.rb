@@ -47,7 +47,7 @@ class Admin::EntriesController < Admin::BaseController
       csv << ["ID", "name", "company", "division", "position", "address", "phone", "email", "entry_type", "entry_table_talk", "intermediary"]
 
       @entries.each do |e|
-        csv << [e.id, e.name, e.company, e.division, e.position, e.address, e.phone, e.email, e.entry_type_text, e.entry_table_talk, e.intermediary]
+        csv << [e.id, e.name, e.company, e.division, e.position, e.address, e.phone, e.email, e.entry_type_text, e.entry_table_talk_text, e.intermediary]
       end
     end
 

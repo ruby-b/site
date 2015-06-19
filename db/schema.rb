@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20150526155002) do
+ActiveRecord::Schema.define(:version => 20150615093627) do
 
   create_table "admins", :force => true do |t|
     t.string   "email",                  :default => "", :null => false
@@ -40,10 +40,11 @@ ActiveRecord::Schema.define(:version => 20150526155002) do
     t.string   "address"
     t.string   "phone"
     t.string   "email"
-    t.datetime "created_at",   :null => false
-    t.datetime "updated_at",   :null => false
+    t.datetime "created_at",       :null => false
+    t.datetime "updated_at",       :null => false
     t.string   "intermediary"
     t.string   "entry_type"
+    t.boolean  "entry_table_talk"
   end
 
   add_index "entries", ["event_id"], :name => "index_entries_on_event_id"
