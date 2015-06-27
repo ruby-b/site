@@ -12,4 +12,8 @@ class Entry < ActiveRecord::Base
   paginates_per PER_PAGE
 
   default_scope order("updated_at DESC")
+
+  def entry_table_talk_text
+    entry_table_talk ? "参加" : "不参加"
+  end
 end
