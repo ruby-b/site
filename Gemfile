@@ -107,3 +107,5 @@ gem "twitter-bootstrap-rails"
 gem 'kaminari'
 
 gem 'enumerize'
+
+gem 'draper', '~> 1.3'
