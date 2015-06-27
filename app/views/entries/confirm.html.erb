@@ -73,7 +73,7 @@
   <div class="wordsection">
     <h3><%= Entry.human_attribute_name(:entry_table_talk) %></h3>
     <div class="wordcontent">
-      <%= @entry.entry_table_talk %>
+      <%= @entry.entry_table_talk ? "申し込む" : "申し込まない" %>
       <%= f.hidden_field :entry_table_talk, :value => @entry.entry_table_talk %>
     </div>
   </div>
