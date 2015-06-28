@@ -11,7 +11,7 @@ class EntriesController < ApplicationController
   end
 
   def show
-    @entry = @event.entries.where(:id => params[:id]).first
+    @entry = @event.entries.where(:id => params[:id]).first.decorate
   end
 
   def confirm
@@ -29,7 +29,7 @@ class EntriesController < ApplicationController
   def create
     I18n.locale = :ja
     @event = Event.where(:id => params[:forum_id]).first
-    @entry = @event.entries.new(params[:entry])
+    @entry = @event.entries.new(params[:entry]).decorate
     if @entry.save
       Notifier.entry_mail(@entry).deliver
       redirect_to forum_entry_path(@event.url, @entry)
