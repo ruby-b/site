@@ -7,7 +7,7 @@ class Admin::EntriesController < Admin::BaseController
   before_filter :set_event
 
   def index
-    @entries = @event.entries.page(params[:page])
+    @entries = EntryDecorator.decorate_collection(@event.entries.page(params[:page]))
   end
 
   def show
@@ -19,7 +19,6 @@ class Admin::EntriesController < Admin::BaseController
 
   def update
     @entry = @event.entries.find(params[:id])
-
 
     if @entry.update_attributes(params[:entry])
       redirect_to admin_forum_entries_path(:forum_id => @event.id), :notice => "申込情報を更新しました"
@@ -41,13 +40,13 @@ class Admin::EntriesController < Admin::BaseController
   end
 
   def csv
-    @entries = @event.entries.all
+    @entries = EntryDecorator.decorate_collection(@event.entries.all)
     filename = "#{@event.url}_entries_#{Date.today.strftime('%Y-%m-%d')}"
     csv_str =  CSV.generate do |csv|
       csv << ["ID", "name", "company", "division", "position", "address", "phone", "email", "entry_type", "entry_table_talk", "intermediary"]
 
       @entries.each do |e|
-        csv << [e.id, e.name, e.company, e.division, e.position, e.address, e.phone, e.email, e.entry_type_text, e.entry_table_talk_text, e.intermediary]
+        csv << [e.id, e.name, e.company, e.division, e.position, e.address, e.phone, e.email, e.entry_type_text, e.entry_table_talk_status, e.intermediary]
       end
     end
 
