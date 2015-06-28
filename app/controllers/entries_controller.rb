@@ -17,7 +17,7 @@ class EntriesController < ApplicationController
   def confirm
     I18n.locale = :ja
     @event = Event.where(:id => params[:forum_id]).first
-    @entry = @event.entries.new(params[:entry])
+    @entry = @event.entries.new(params[:entry]).decorate
 
     if @entry.valid?
       #redirect_to event_entry_path(@event.url, @entry)
