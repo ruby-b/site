@@ -7,7 +7,7 @@ class Admin::EntriesController < Admin::BaseController
   before_filter :set_event
 
   def index
-    @entries = EntryDecorator.decorate_collection(@event.entries.page(params[:page]))
+    @entries = @event.entries.page(params[:page]).decorate
   end
 
   def show
@@ -40,7 +40,7 @@ class Admin::EntriesController < Admin::BaseController
   end
 
   def csv
-    @entries = EntryDecorator.decorate_collection(@event.entries.all)
+    @entries = @event.entries.decorate
     filename = "#{@event.url}_entries_#{Date.today.strftime('%Y-%m-%d')}"
     csv_str =  CSV.generate do |csv|
       csv << ["ID", "name", "company", "division", "position", "address", "phone", "email", "entry_type", "entry_table_talk", "intermediary"]
