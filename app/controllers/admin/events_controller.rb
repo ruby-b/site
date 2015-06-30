@@ -5,7 +5,7 @@ class Admin::EventsController < Admin::BaseController
 
   def show
     @event = Event.find(params[:id])
-    @entries = @event.entries.page(1)
+    @entries = @event.entries.page(1).decorate
     @total_entries = @event.entries.count
   end
 end
