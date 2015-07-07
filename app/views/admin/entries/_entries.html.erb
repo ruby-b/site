@@ -18,7 +18,7 @@
       <tr id="entry-<%= entry.id %>">
       <td><%= entry.updated_at.strftime("%Y/%m/%d") %></td>
       <td><%= entry.company %></td>
-      <td><%= entry.division %><%= ",  " if entry.division.present? %><%= entry.position %></td>
+      <td><%= [entry.division, entry.position].select(&:present?).join(",  ") %></td>
       <td><%= entry.name %></td>
       <td><%= entry.phone %></td>
       <td><%= mail_to entry.email, entry.email %></td>
